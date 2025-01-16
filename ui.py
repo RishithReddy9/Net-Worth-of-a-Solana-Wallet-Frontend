@@ -11,10 +11,10 @@ if st.button("Submit"):
     if user_input:
         try:
             payload = {"wallet_address": user_input}
-            response = requests.post(URL, json=payload)
+            response = requests.get(URL, json=payload)
             net_worth = str(response.json())
             if response:
-                st.write("Net Worth =", net_worth, "$")
+                st.subheader(f"NetWorth = :green[{net_worth} $]")
         except Exception as e:
             st.error(e)
     else:
