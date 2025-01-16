@@ -1,0 +1,5 @@
+fastapi[all]
+streamlit
+sqlalchemy
+pandas
+pydantic
